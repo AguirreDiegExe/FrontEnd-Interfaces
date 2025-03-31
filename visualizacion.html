@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualización de Pedido</title>
+  <link rel="stylesheet" href="visualizacionstyles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="back-button">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <h1>Visualización</h1>
+      <div class="placeholder"></div>
+    </header>
+    
+    <div class="order-card">
+      <div class="order-header">
+        <div class="order-icon">
+          <i class="fas fa-box"></i>
+        </div>
+        <div class="order-title">Pedido P01</div>
+      </div>
+      
+      <div class="restaurant-name">Restaurante "El sabor"</div>
+      
+      <div class="order-info">
+        <div class="info-item">
+          <div class="info-icon location">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="info-text">Av. Rivadavia 1234, Centro</div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon note">
+            <i class="fas fa-clipboard-list"></i>
+          </div>
+          <div class="info-text">Entrega en la puerta principal</div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon time">
+            <i class="far fa-clock"></i>
+          </div>
+          <div class="info-text">12:00 AM, 05/10/2024</div>
+        </div>
+      </div>
+      
+      <div class="products-section">
+        <div class="products-header">
+          <div class="product-icon"><i class="fas fa-utensils"></i></div>
+          <div class="products-title">Productos</div>
+          <div class="product-icon"><i class="fas fa-utensils"></i></div>
+        </div>
+        
+        <table class="products-table" id="products-table">
+          <thead>
+            <tr>
+              <th>Número</th>
+              <th>Producto</th>
+              <th>Cantidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>  
+            </tr>
+            <tr>
+                <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+                <td></td>
+              <td></td>
+              <td></td>  
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <div class="action-buttons">
+      <button class="alert-button">
+        <i class="fas fa-bell"></i>
+        Emitir Alerta
+      </button>
+      <button class="deliver-button">
+        Entregar Pedido
+      </button>
+    </div>
+  </div>
+  
+  <script src="visualizacionscript.js"></script>
+</body>
+</html>
+
