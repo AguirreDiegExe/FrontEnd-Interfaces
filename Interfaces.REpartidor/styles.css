@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f5f5f5;
+  }
+  
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: white;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 15px;
+    background-color: white;
+  }
+  
+  .back-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .back-button i {
+    font-size: 24px;
+    color: #000;
+  }
+  
+  h1 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-label {
+    font-size: 10px;
+    margin-top: 2px;
+    color: #333;
+  }
+  
+  .profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .profile-icon i {
+    font-size: 20px;
+    color: white;
+  }
+  
+  .search-container {
+    padding: 0 15px;
+    margin-bottom: 15px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    padding: 10px 15px;
+  }
+  
+  .search-bar i {
+    margin-right: 10px;
+    color: #666;
+  }
+  
+  .search-bar input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  .route-button-container {
+    padding: 0 15px;
+    margin-bottom: 15px;
+  }
+  
+  .route-button {
+    width: 100%;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .orders-list {
+    padding: 0 15px;
+  }
+  
+  .order-card {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .order-id {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .order-status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+  
+  .order-status i {
+    margin-right: 5px;
+  }
+  
+  .not-delivered {
+    background-color: #8b0000;
+  }
+  
+  .delivered {
+    background-color: #006400;
+  }
+  
+  .to-deliver {
+    background-color: #b8860b;
+  }
+  
+  .order-address {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  
+  .order-address i {
+    color: #ff0000;
+    margin-right: 8px;
+    margin-top: 3px;
+  }
+  
+  .order-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .order-time {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .order-price {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .order-price i {
+    color: #006400;
+    margin-right: 5px;
+  }
+  
+  /* Media queries para dispositivos móviles */
+  @media (max-width: 480px) {
+    .container {
+      width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    .profile-label {
+      font-size: 9px;
+    }
+  
+    .order-card {
+      padding: 12px;
+    }
+  
+    .order-id {
+      font-size: 16px;
+    }
+  
+    .order-status {
+      font-size: 12px;
+      padding: 4px 8px;
+    }
+  
+    .order-address span {
+      font-size: 14px;
+    }
+  
+    .order-time,
+    .order-price {
+      font-size: 13px;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    h1 {
+      font-size: 18px;
+    }
+  
+    .search-bar {
+      padding: 8px 12px;
+    }
+  
+    .search-bar input {
+      font-size: 14px;
+    }
+  
+    .route-button {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .order-address span {
+      font-size: 13px;
+    }
+  
+    .order-time,
+    .order-price {
+      font-size: 12px;
+    }
+  }
+  
+  

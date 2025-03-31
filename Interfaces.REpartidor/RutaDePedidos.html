@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruta de Pedidos</title>
+  <link rel="stylesheet" href="RutaDePedidos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="back-button">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+      <div class="logo-container">
+        <div class="logo">
+          <div class="logo-text">
+            <span class="logo-d">D</span>
+            <span class="logo-v">V</span>
+          </div>
+        </div>
+      </div>
+      <h1>Ruta de pedidos a entregar</h1>
+    </header>
+    
+    <div class="map-container">
+      <!-- Usamos una imagen estática como fallback mientras carga el mapa -->
+      <div class="map-placeholder">
+        <img src="map-placeholder.jpg" alt="Mapa de ruta" id="map-placeholder-img">
+      </div>
+      <div id="map"></div>
+    </div>
+    
+    <div class="details-container">
+      <div class="tabs">
+        <button class="tab-button active" data-tab="order-details">Detalles del Pedido</button>
+        <button class="tab-button" data-tab="route-details">Detalles de la Ruta</button>
+      </div>
+      
+      <div class="tab-content" id="order-details">
+        <div class="delivery-team">
+          <p>Entrega del pedido a cargo de:</p>
+          <div class="input-container">
+            <input type="text" id="team-name" placeholder="Ingrese equipo de reparto">
+          </div>
+        </div>
+        
+        <div class="order-products">
+          <p>Productos del pedido:</p>
+          <ul id="products-list">
+            <!-- Los productos se cargarán dinámicamente desde JavaScript -->
+          </ul>
+          <div class="add-product">
+            <input type="text" id="new-product" placeholder="Nuevo producto">
+            <button id="add-product-btn"><i class="fas fa-plus"></i></button>
+          </div>
+        </div>
+        
+        <div class="client-info">
+          <p>Detalle del cliente:</p>
+          <div class="client-row">
+            <div class="client-icon">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="input-container">
+              <input type="text" id="client-name" placeholder="Nombre del cliente">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tab-content hidden" id="route-details">
+        <div class="route-info">
+          <h3>Información de la Ruta</h3>
+          <div class="route-stats">
+            <div class="stat">
+              <i class="fas fa-route"></i>
+              <div>
+                <p>Distancia total</p>
+                <h4 id="total-distance">0.0 km</h4>
+              </div>
+            </div>
+            <div class="stat">
+              <i class="fas fa-clock"></i>
+              <div>
+                <p>Tiempo estimado</p>
+                <h4 id="estimated-time">0 min</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="stops-list">
+            <h4>Paradas en la ruta</h4>
+            <ul id="stops-list">
+              <!-- Las paradas se cargarán dinámicamente desde JavaScript -->
+            </ul>
+            <div class="add-stop">
+              <div class="add-stop-form">
+                <input type="text" id="stop-name" placeholder="Nombre del lugar">
+                <input type="text" id="stop-address" placeholder="Dirección">
+                <div class="coordinates-row">
+                  <input type="number" id="stop-lat" placeholder="Latitud" step="0.0001">
+                  <input type="number" id="stop-lng" placeholder="Longitud" step="0.0001">
+                </div>
+                <button id="add-stop-btn">Agregar parada</button>
+                <button id="use-current-location-btn">Usar ubicación actual</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="RutaDePedidos.js"></script>
+</body>
+</html>
+
+
